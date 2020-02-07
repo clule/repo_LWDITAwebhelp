@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>LwDITA设计</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
+<script type="text/javascript" language="JavaScript">//<![CDATA[function reDo() {  if (innerWidth != origWidth || innerHeight != origHeight)     location.reload();}if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {	origWidth = innerWidth;	origHeight = innerHeight;	onresize = reDo;}onerror = null; //]]></script><style type="text/css">/*<![CDATA[*/
+<!--div.WebHelpPopupMenu { position:absolute;left:0px;top:0px;z-index:4;visibility:hidden; }p.WebHelpNavBar { text-align:right; }-->
+/*]]>*/</style><script type="text/javascript">//<![CDATA[
+  gRootRelPath = "..";  gCommonRootRelPath = "..";  gTopicId = "1.0_4";  
+//]]></script><meta charset="utf-8"/><script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../template/scripts/mhtopic.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+</head>
+<body>
+  <h2 data-condition="-">LwDITA设计</h2>
+  <h3 data-condition="-">LwDITA的话题组成</h3>
+  <p data-source-line="79" data-condition="-">LwDITA通过精筛，保留了以下文档组成部分：</p>
+  <ul data-source-line="80" data-condition="-">
+    <li>Body</li>
+    <li>Cross reference</li>
+    <li>Data</li>
+    <li>Description</li>
+    <li>Figure</li>
+    <li>Footnote</li>
+    <li>Image and alternate text</li>
+    <li>In-line formatting: Bold, italics, underline, subscript, superscript</li>
+    <li>Lists: Definition list, ordered list, unordered list</li>
+    <li>Note</li>
+    <li>Paragraph</li>
+    <li>Phrase</li>
+    <li>Prolog</li>
+    <li>Preformatted text</li>
+    <li>Section</li>
+    <li>Short description</li>
+    <li>Table</li>
+    <li>Title</li>
+    <li>Topic</li>
+  </ul>
+  <h3 data-condition="-">LwDITA的地图组成</h3>
+  <p data-source-line="101" data-condition="-">LwDITA通过精筛，保留了以下地图组成元素：</p>
+  <ul data-source-line="102" data-condition="-">
+    <li>Data</li>
+    <li>In-line formatting: Bold, italics, underline, superscript, subscript</li>
+    <li>Key definition</li>
+    <li>Link text</li>
+    <li>Map</li>
+    <li>Navigation title</li>
+    <li>Phrase</li>
+    <li>Topic metadata</li>
+    <li>Topic reference</li>
+  </ul>
+  <p data-condition="-"></p>
+  <h3 data-condition="-">更加严格的模型限制</h3>
+  <p data-source-line="113" data-condition="-">更加严格的模型减少了写作时进行选择时的思考成本，但依赖于一些硬性规定。例如在XDITA和HDITA中，除了description、short description、和title元素之外，所有的文字必须包含在段落标签中，提高信息复用性。在段落中可以出现Bold、Italics、Phrase、Superscript、Subscrip、Underline几种形式。</p>
+  <p data-source-line="115" data-condition="-">DITA 1.3中的标签形式：</p>
+  <pre data-source-line="117" data-condition="-"><code><span>&lt;<span>section</span>&gt;</span>Compatible light bulbs include the following:
+<span>&lt;<span>ul</span>&gt;</span>
+<span>&lt;<span>li</span>&gt;</span>Compact Fluorescent<span><!--<span-->li</span>&gt;
+<span>&lt;<span>li</span>&gt;</span>Light Emitting Diode<span><!--<span-->li</span>&gt;
+<span><!--<span-->ul</span>&gt;
+<span><!--<span-->section</span>&gt;
+</code></pre>
+  <p data-source-line="125" data-condition="-">对比LwDITA中的有效标签形式：</p>
+  <pre data-source-line="127" data-condition="-"><code><span>&lt;<span>section</span>&gt;</span>
+<span>&lt;<span>p</span>&gt;</span>Compatible light bulbs include the following:<span><!--<span-->p</span>&gt;
+<span>&lt;<span>ul</span>&gt;</span>
+<span>&lt;<span>li</span>&gt;</span>
+<span>&lt;<span>p</span>&gt;</span>Compact Fluorescent<span><!--<span-->p</span>&gt;
+<span><!--<span-->li</span>&gt;
+<span>&lt;<span>li</span>&gt;</span>
+<span>&lt;<span>p</span>&gt;</span>Light Emitting Diode<span><!--<span-->p</span>&gt;
+<span><!--<span-->li</span>&gt;
+<span><!--<span-->ul</span>&gt;
+<span><!--<span-->section</span>&gt;</code>
+</pre>
+  <h3 data-condition="-">多媒体内容</h3>
+  <p data-source-line="142" data-condition="-">LwDITA为<strong>多媒体内容</strong>添加了新的元素类型。 这些元素类型与 HTML5兼容，接下来也会在DITA 1.3标准版中出现。 DITA 1.3规范中将<object>元素类型设置为 在主题中包含的多媒体内容，与HTML中的<object>对应。 LwDITA更新了XML到HTML元素类型的对应关系，将原来存在于DITA 1.3中的 <object>和<param/>标签进行细化，整理为以下几个元素类型：<p></p>
+  <ul data-source-line="146" data-condition="-">
+    <li>Audio</li>
+    <li>Autoplay</li>
+    <li>Controls</li>
+    <li>Loop</li>
+    <li>Muted</li>
+    <li>Poster</li>
+    <li>Source</li>
+    <li>Track</li>
+    <li>Video</li>
+  </ul>
+  <p data-source-line="156" data-condition="-"><strong>注：</strong><span> </span>多媒体元素不能在MDITA中使用。</p>
+
+</object></object></object></p></body></html>

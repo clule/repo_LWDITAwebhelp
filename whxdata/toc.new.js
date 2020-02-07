@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"简介","type":"item","url":"轻量级DITA.htm"},{"name":"详细介绍","type":"book","key":"toc1"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

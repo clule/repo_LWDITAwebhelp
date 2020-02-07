@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>LwDITA与标准DITA的区别</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/default.css"/>
+<script type="text/javascript" language="JavaScript">//<![CDATA[function reDo() {  if (innerWidth != origWidth || innerHeight != origHeight)     location.reload();}if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {	origWidth = innerWidth;	origHeight = innerHeight;	onresize = reDo;}onerror = null; //]]></script><style type="text/css">/*<![CDATA[*/
+<!--div.WebHelpPopupMenu { position:absolute;left:0px;top:0px;z-index:4;visibility:hidden; }p.WebHelpNavBar { text-align:right; }-->
+/*]]>*/</style><script type="text/javascript">//<![CDATA[
+  gRootRelPath = "..";  gCommonRootRelPath = "..";  gTopicId = "1.0_2";  
+//]]></script><meta charset="utf-8"/><script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../template/scripts/mhtopic.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+</head>
+<body>
+  <h2 data-condition="-">LwDITA与标准DITA的区别</h2>
+  <p data-source-line="60" data-condition="-">以下列举了一些LwDITA与标准DITA之间的显著区别，但再LwDITA规范确定之后可能会有所更改：</p>
+  <ul data-source-line="61" data-condition="-">
+    <li>不允许混合内容。所有文本内容必须存在于‹p›元素中。比如：<ins>‹li›这是一个列表项‹/li›</ins><span> </span>这一句存在语法错误。要想改正需要增加
+      <p>标签，例如：<ins>‹li› ‹p›这是一个列表项‹/p› ‹/li›</ins><span> </span>此是为了确保跨内容的统一，和结构的可预测性，使开发样式表和工具来处理内容变得更加容易</p>
+    </li>
+    <li>没有CALS表元素（‹table›，‹row›，‹entry›等）。举个例子，这意味着用户无法创建具有合并单元格，标题或特定列宽的复杂表格。</li>
+    <li>没有prolog元信息（所有内容都在‹data›标签中）</li>
+    <li>没有相关链接</li>
+    <li>只有突出显示(highlight)的域中的子集：‹b›，‹i›，‹u›，‹sup›，‹sub›标签可用</li>
+    <li>只有‹topicmeta›、‹topicref›可用，没有‹topichead›和‹topicgroup›</li>
+    <li>没有‹topicmeta›和‹topicref›可用，没有‹topichead›和‹topicgroup›标签</li>
+    <li>地图没有‹title›元素。标题（如需要添加）可以放在‹topicmeta›中的‹navtitle›中</li>
+    <li>仅‹topicmeta›和‹topicref›可用；没有‹topichead›或‹topicgroup›</li>
+    <li>属性可以随时启用和关闭。其中，默认只有@props可用，其他属性可以进行自定义添加</li>
+  </ul>
+  <h5 data-source-line="72" id="lwdita和标准dita的兼容性" data-condition="-">LwDITA和标准DITA的兼容性</h5>
+  <p data-source-line="73" data-condition="-">像前文说的那样，LwDITA可以说算是标准DITA的一个子集，因此，大多数LwDITA内容都与标准DITA环境兼容。</p>
+  <p data-source-line="75" data-condition="-">此外，在标准地图（map）中允许LwDITA主题和标准DITA主题同时出现。但在LwDITA环境中并不能使用DITA标准版本的地图和属性。</p>
+
+</body></html>
